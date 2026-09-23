@@ -4,7 +4,6 @@ const cors = require('cors');
 const helmet = require('helmet');
 const morgan = require('morgan');
 const rateLimit = require('express-rate-limit');
-const xss = require('xss-clean');
 const hpp = require('hpp');
 const productRoutes = require('./src/routes/products.routes');
 const saleRoutes = require('./src/routes/sales.routes');
@@ -33,7 +32,9 @@ const corsOptions = {
 app.use(cors(corsOptions));
 
 // Data Sanitization
-app.use(xss()); // Prevent XSS attacks
+// NOTE: xss-clean removed — it is incompatible with Express 5 (mutates req.query,
+// which is a getter-only property in Express 5) and the package is deprecated.
+// Input validation/sanitization is handled by express-validator on the routes.
 app.use(hpp()); // Prevent HTTP Parameter Pollution
 
 app.use(morgan('dev'));
