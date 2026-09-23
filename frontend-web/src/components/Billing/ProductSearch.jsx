@@ -1,4 +1,3 @@
-```javascript
 import React, { useState, useEffect } from 'react';
 import { Search } from 'lucide-react';
 import { api } from '../../services/api';
@@ -61,4 +60,3 @@ export default function ProductSearch({ onAddToCart }) {
     </div>
   );
 }
-```
