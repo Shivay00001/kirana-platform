@@ -1,5 +1,7 @@
 # Kirana Platform
 
+Built by [VisionQuantech](https://visionquantech.com) — AI agents, apps & tools for small businesses.
+
 Modern POS & inventory platform for kirana stores — fast billing, smart stock tracking.
 
 ![Language](https://img.shields.io/badge/Language-JavaScript-blue)
